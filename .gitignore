@@ -1,0 +1,4 @@
+app/node_modules
+app/scripts.old.js
+app/yarn-error.log
+.parcel-cache

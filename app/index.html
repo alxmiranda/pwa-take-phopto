@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+      }
+      .container {
+        height: 100vh;
+        /* background-color: #333; */
+        flex-direction: column;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        overflow: hidden;
+      }
+      button {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        position: absolute;
+        top: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button:before {
+        width: 80%;
+        height: 80%;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        border: 2px solid #000;
+        opacity: .8;
+      }
+      video,
+      img {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100vh;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <video autoplay playsinline></video>
+        <img class="hidden"/>
+      </div>
+      <button id="takePhoto"></button>
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script type="module" src="/scripts.js"></script>
+  </body>
+</html>
